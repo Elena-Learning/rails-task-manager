@@ -1,0 +1,18 @@
+<h1>Welcome to the Task Generator</h1>
+<ol> <% @tasks.each do |task| %>
+  <li>
+    <% if task.completed %>
+      <i class="far fa-check-circle"></i>
+    <% else %>
+      <i class="far fa-window-close"></i>
+    <% end %>
+    <%= link_to task.title, task_path(task) %>
+  </li>
+  <% end %>
+</ol>
+<%= link_to "Add to list", tasks_new_path %>
+
+
+
+
+
